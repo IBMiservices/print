@@ -1,0 +1,21 @@
+**FREE
+
+// Spool class
+Dcl-ds Spool Qualified template;
+    overflow ind;
+    spoolName char(10);
+    Dcl-DS lineOutput LEN(132) INZ;
+    END-DS;
+End-ds;
+
+Dcl-PR setupSpool  EXTPROC('SETUPSPOOL');
+End-PR;
+
+// Dcl-PR OpenSpool  EXTPROC('OPENSPOOL');
+// End-PR;
+
+// Dcl-PR WriteSpool  EXTPROC('WRITESPOOL');
+// End-PR;
+
+// Dcl-PR CloseSpool  EXTPROC('CLOSESPOOL');
+// End-PR;
