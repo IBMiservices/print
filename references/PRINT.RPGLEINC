@@ -8,7 +8,8 @@ Dcl-ds Spool Qualified template;
     END-DS;
 End-ds;
 
-Dcl-PR setupSpool  EXTPROC('SETUPSPOOL');
+Dcl-PR setupSpool;
+    spoolAInitialiser likeds(Spool);
 End-PR;
 
 // Dcl-PR OpenSpool  EXTPROC('OPENSPOOL');

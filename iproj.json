@@ -2,6 +2,8 @@
   "description": "Services d'impression de spool sans utiliser de fichier PRTF",
   "curlib": "&CURLIB",
   "includePath": [
-    "references"
+    "references",
+    "dep/APIIBMi/Sources",
+    "dep/messageutils/ref"
   ]
 }

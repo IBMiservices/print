@@ -15,8 +15,8 @@ end-pi;
 
 // Dcl-s rc Char(1);
 
-runCmd('OVRPRTF FILE(QSYSPRT) TOFILE(*FILE) +
-                 SPLFNAME(' + %trim(spoolAInitialiser.spoolName) + ') OVRSCOPE(*JOB)');
+// ExecCmd('OVRPRTF FILE(QSYSPRT) TOFILE(*FILE) +
+//                  SPLFNAME(' + %trim(spoolAInitialiser.spoolName) + ') OVRSCOPE(*JOB)');
 // monitor;
 //     openPrinter();
 //     print('Executing:   setUpWSpool()');
@@ -35,18 +35,18 @@ End-Proc;
 // ============================================================
 //  Ouvre le spool.
 // ============================================================
-// Dcl-Proc OpenSpool export;
-// Dcl-PI *N;
-// End-PI;
+ Dcl-Proc OpenSpool export;
+ Dcl-PI *N;
+ End-PI;
 
-//     open QSYSPRT;
+     open QSYSPRT;
 
-// End-Proc;
+ End-Proc;
 
 // ============================================================
 //  Écrit un message dans le spool.
 // ============================================================
-// Dcl-Proc WRITESPOOL export;
+ Dcl-Proc WRITESPOOL export;
 // Dcl-PI *N;
 //     MESSAGE CHAR(132) CONST;
 // End-PI;
@@ -59,17 +59,17 @@ End-Proc;
     
 // write QSYSPRT lineOutput;
 
-// End-Proc;
+ End-Proc;
 
 // ============================================================
 //  Ferme le spool.
 // ============================================================
-// Dcl-Proc CloseSpool export;
-// Dcl-PI *N;
-// End-PI;
+ Dcl-Proc CloseSpool export;
+ Dcl-PI *N;
+ End-PI;
 
-// if (%open(QSYSPRT));
-//     close QSYSPRT;
-// endif;
+ if (%open(QSYSPRT));
+     close QSYSPRT;
+ endif;
 
-// End-Proc;
+ End-Proc;
