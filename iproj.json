@@ -5,5 +5,8 @@
     "references",
     "dep/APIIBMi/Sources",
     "dep/messageutils/ref"
+  ],
+  "postUsrlibl": [
+    "rpgunit"
   ]
 }

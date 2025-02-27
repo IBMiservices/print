@@ -1,2 +1,1 @@
-TESTSPRINT.SRVPGM: testsprint.sqlrpgle testsprint.srvpgm
-TESTSPRINT.MODULE: testsprint.sqlrpgle
+TESTSPRINT.SRVPGM: testsprint.ILESRVPGM testsprint.sqlrpgle PRINT.SRVPGM

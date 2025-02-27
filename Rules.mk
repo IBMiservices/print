@@ -1,1 +1,1 @@
-SUBDIRS = core dep/messageutils/core
+SUBDIRS = core dep/messageutils/core tests
