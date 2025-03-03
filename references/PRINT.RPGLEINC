@@ -12,8 +12,8 @@ Dcl-PR setupSpool;
     spoolAInitialiser likeds(Spool);
 End-PR;
 
-// Dcl-PR OpenSpool  EXTPROC('OPENSPOOL');
-// End-PR;
+ Dcl-PR OpenSpool  EXTPROC('OPENSPOOL');
+ End-PR;
 
 // Dcl-PR WriteSpool  EXTPROC('WRITESPOOL');
 // End-PR;

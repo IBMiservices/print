@@ -1,9 +1,10 @@
 **FREE
-Ctl-Opt NoMain Option(*SrcStmt : *NoDebugIO);
+Ctl-Opt NoMain Option(*SrcStmt : *NoDebugIO) Bnddir('SERVICES');
 
 Dcl-F QSYSPRT PRINTER(132) usropn oflind(overflow);
 
 /include 'PRINT.RPGLEINC'
+/include 'commands.RPGLEINC'
 
 // // ============================================================
 // //  Set up test suite. Executed once per RUCALLTST.
@@ -13,22 +14,22 @@ Dcl-pi *n;
     spoolAInitialiser likeds(Spool);
 end-pi;
 
-// Dcl-s rc Char(1);
+ Dcl-s rc Char(1);
 
-// ExecCmd('OVRPRTF FILE(QSYSPRT) TOFILE(*FILE) +
-//                  SPLFNAME(' + %trim(spoolAInitialiser.spoolName) + ') OVRSCOPE(*JOB)');
-// monitor;
-//     openPrinter();
-//     print('Executing:   setUpWSpool()');
-// on-error;
-//     // ignore errors ...
-//     // ... but try to remove the override.
-//     monitor;
-//         runCmd('DLTOVR FILE(QSYSPRT) LVL(*JOB)');
-//     on-error;
-//         dsply '*** Failed to delete QSYSPRT override! ***' rc;
-//     endmon;
-// endmon;
+ execCommand('OVRPRTF FILE(QSYSPRT) TOFILE(*FILE) +
+                  SPLFNAME(' + %trim(spoolAInitialiser.spoolName) + ') OVRSCOPE(*JOB)');
+ monitor;
+     OpenSpool();
+     // print('Executing:   setUpWSpool()');
+ on-error;
+     // ignore errors ...
+     // ... but try to remove the override.
+     monitor;
+         execCommand('DLTOVR FILE(QSYSPRT) LVL(*JOB)');
+     on-error;
+         dsply '*** Failed to delete QSYSPRT override! ***' rc;
+     endmon;
+ endmon;
 
 End-Proc;
 

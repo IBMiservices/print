@@ -4,9 +4,10 @@
   "includePath": [
     "references",
     "dep/APIIBMi/Sources",
-    "dep/messageutils/ref"
+    "dep/messageutils/ref",
+    "dep/CommandsAPI/reference"
   ],
   "postUsrlibl": [
-    "rpgunit"
+    "OLIVIER2"
   ]
 }

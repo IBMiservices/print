@@ -3,6 +3,10 @@
      "messageutils": {
        "url": "https://github.com/IBMiservices/messageutils.git",
        "ref": "3-simplifier-larborecence-de-sources"
+     },
+     "CommandsAPI": {
+       "url": "https://github.com/IBMiservices/commandsAPI",
+       "ref": "10-ajouter-les-parametres-dentree-de-execcommand"
      }
    }
  }
