@@ -1,0 +1,1 @@
+SUBDIRS = core dep/messageutils/core dep/CommandsAPI/core
