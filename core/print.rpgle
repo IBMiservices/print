@@ -20,7 +20,7 @@ end-pi;
                   SPLFNAME(' + %trim(spoolAInitialiser.spoolName) + ') OVRSCOPE(*JOB)');
  monitor;
      OpenSpool();
-     // print('Executing:   setUpWSpool()');
+     print('Executing:   setUpSpool('+ %trim(spoolAInitialiser.spoolName) + ')');
  on-error;
      // ignore errors ...
      // ... but try to remove the override.
@@ -48,17 +48,17 @@ End-Proc;
 //  Écrit un message dans le spool.
 // ============================================================
  Dcl-Proc WRITESPOOL export;
-// Dcl-PI *N;
-//     MESSAGE CHAR(132) CONST;
-// End-PI;
+ Dcl-PI *N;
+     MESSAGE CHAR(132) CONST;
+ End-PI;
 
-// Dcl-DS lineOutput LEN(132) INZ;
-// END-DS;
+ Dcl-DS lineOutput LEN(132) INZ;
+ END-DS;
 
 
-// lineOutput = %trim(MESSAGE);
+ lineOutput = %trim(MESSAGE);
     
-// write QSYSPRT lineOutput;
+ write QSYSPRT lineOutput;
 
  End-Proc;
 
