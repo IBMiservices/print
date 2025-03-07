@@ -1,1 +1,0 @@
-TESTSPRINT.SRVPGM: testsprint.ILESRVPGM testsprint.sqlrpgle PRINT.SRVPGM
